@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Energy Smart Meter Dashboard</title>
+  <style>
+    body { font-family: system-ui, Arial; margin: 24px; }
+    .grid { display:grid; grid-template-columns: repeat(2,minmax(220px,1fr)); gap:12px; }
+    .card { border:1px solid #e5e7eb; border-radius:14px; padding:14px; }
+    .label { color:#6b7280; font-size:12px; }
+    .value { font-size:22px; font-weight:700; margin-top:6px; }
+    pre { background:#0b1020; color:#e5e7eb; padding:12px; border-radius:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <h1>Energy Smart Meter</h1>
+  <p id="status">Connecting…</p>
+
+  <div class="grid">
+    <div class="card"><div class="label">Voltage (V)</div><div class="value" id="v">—</div></div>
+    <div class="card"><div class="label">Current (A)</div><div class="value" id="i">—</div></div>
+    <div class="card"><div class="label">Power (W)</div><div class="value" id="p">—</div></div>
+    <div class="card"><div class="label">Energy (kWh)</div><div class="value" id="e">—</div></div>
+    <div class="card"><div class="label">Frequency (Hz)</div><div class="value" id="f">—</div></div>
+    <div class="card"><div class="label">Power Factor</div><div class="value" id="pf">—</div></div>
+    <div class="card"><div class="label">Temperature (°C)</div><div class="value" id="t">—</div></div>
+    <div class="card"><div class="label">Humidity (%)</div><div class="value" id="h">—</div></div>
+  </div>
+
+  <h3 style="margin-top:18px;">Raw JSON (Debug)</h3>
+  <pre id="raw">{}</pre>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
